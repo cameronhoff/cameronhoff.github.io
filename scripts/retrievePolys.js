@@ -49,7 +49,7 @@ function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-async function printLi(arr) {
+async function printLi(arr, delay) {
     const results = document.querySelector('#csk-results');
     for (let i = 0; i < arr.length; i++) {
         if (stopClicked) {
@@ -59,7 +59,8 @@ async function printLi(arr) {
         let liEl = document.createElement('li');
         liEl.innerHTML = `${arr[i]}`;
         results.appendChild(liEl);
-        await sleep(1000);
+        liEl.scrollIntoView();
+        await sleep(delay);
     } 
 }
 
@@ -68,10 +69,10 @@ function print7(cap) {
     results.innerHTML = '';
     switch (cap) {
         case 1:
-            printLi(arr7_1);
+            printLi(arr7_1, 0);
             break;
         case 2:
-            printLi(arr7_2);
+            printLi(arr7_2, 0);
             break;
         case 3:
             
@@ -84,13 +85,13 @@ function print15(cap) {
     results.innerHTML = '';
     switch (cap) {
         case 1:
-            printLi(arr15_1);
+            printLi(arr15_1, 0);
             break;
         case 2:
-            printLi(arr15_2);
+            printLi(arr15_2, 0);
             break;
         case 3:
-            printLi(arr15_3);
+            printLi(arr15_3, 0);
             break;
              
     }
@@ -100,13 +101,13 @@ function print31(cap) {
     results.innerHTML = '';
     switch (cap) {
         case 1:
-            printLi(arr31_1);
+            printLi(arr31_1, 0);
             break;
         case 2:
-            printLi(arr31_2);
+            printLi(arr31_2, 100);
             break;
         case 3:
-            printLi(arr31_3);
+            printLi(arr31_3, 100);
             break;
              
     }
@@ -116,13 +117,13 @@ function print63(cap) {
     results.innerHTML = '';
     switch (cap) {
         case 1:
-            printLi(arr63_1);
+            printLi(arr63_1, 0);
             break;
         case 2:
-            printLi(arr63_2);
+            printLi(arr63_2, 80);
             break;
         case 3:
-            printLi(arr63_3);
+            printLi(arr63_3, 80);
             break;
              
     }
@@ -132,13 +133,13 @@ function print127(cap) {
     results.innerHTML = '';
     switch (cap) {
         case 1:
-            printLi(arr127_1);
+            printLi(arr127_1, 80);
             break;
         case 2:
-            printLi(arr127_2);
+            printLi(arr127_2, 80);
             break;
         case 3:
-            printLi(arr127_3);
+            printLi(arr127_3, 80);
             break;
              
     }
@@ -148,13 +149,13 @@ function print255(cap) {
     results.innerHTML = '';
     switch (cap) {
         case 1:
-            printLi(arr255_1);
+            printLi(arr255_1, 10);
             break;
         case 2:
-            printLi(arr255_2);
+            printLi(arr255_2, 80);
             break;
         case 3:
-            printLi(arr255_3);
+            printLi(arr255_3, 80);
             break;
              
     }
