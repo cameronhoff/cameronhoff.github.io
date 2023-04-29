@@ -12,10 +12,7 @@
     <body>
         <ul class="nav nav-tabs">
             <li class="nav-item">
-                <a class="nav-link active" href="./encodeInfo.html">СЦК</a>
-            </li>
-            <li class="nav-item invisible">
-                <a class="nav-link" aria-current="page" href="./hypothesisCheck.html">Гіпотеза</a>
+                <a class="nav-link active" href="./encodeInfo.html">Циклічні коди кратності 3</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="./polynomialCycle.html">Відрахування циклу полінома</a>
@@ -26,7 +23,9 @@
             <li class="nav-item">
                 <a class="nav-link" href="./modularMultiply.html">Модулярне множення</a>
             </li>
-            
+            <li class="nav-item invisible">
+                <a class="nav-link" aria-current="page" href="./hypothesisCheck.html">Гіпотеза</a>
+            </li>
         </ul>
         <div class="container">
             <div class="mb-2 mt-2">
@@ -41,22 +40,12 @@
                 </select> 
             </div>
             <div class="mb-2">
-                <select class="form-select" id="error-corr-cap" aria-label="Корегуюча спроможність коду:">
+                <select class="form-select" id="num-of-errors" aria-label="Корегуюча спроможність коду:">
                     <option selected>Корегуюча спроможність коду:</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
                 </select> 
-            </div>
-            <div class="mb-2">
-                <h5>Система числення:</h4>
-                <button type="button" class="btn btn-outline-secondary">2-ва</button>
-                <button type="button" class="btn btn-outline-secondary">8-ва</button>
-                <button type="button" class="btn btn-outline-secondary">16-ва</button>
             </div>
             <div class="mb-2">
                 <button type="button" id="calc-factors-btn" class="btn btn-outline-primary">Рахувати</button>
@@ -71,6 +60,6 @@
             </div>
         </div>
         <script src="../scripts/storeFields.js"></script>
-        <script src="../scripts/encodeInfo.js"></script>
+        <script src="../scripts/retrievePolys.js"></script>
     </body>
 </html>
