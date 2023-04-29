@@ -1,23 +1,23 @@
 document.addEventListener('DOMContentLoaded', () => {
     const codeWordLen = document.querySelector('#code-word-len');
-    // Corrective capacity of the code
     const numOfErrors = document.querySelector('#num-of-errors');
     const calcFactorsBtn = document.querySelector('#calc-factors-btn');
 
     let errors = 0
     let codelen = 0
+    codelen = codeWordLen.value;
+    errors = parseInt(numOfErrors.value); 
     codeWordLen.addEventListener('change', () => {
-        console.log('changed codewordlen')
         codelen = codeWordLen.value;
+        console.log(`changed codewordlen to ${codelen}`)
     })
 
     numOfErrors.addEventListener('change', () => {
-        console.log('changed num of errors')
         errors = parseInt(numOfErrors.value); 
+        console.log(`changed num of errors to ${errors}`)
     })
     calcFactorsBtn.addEventListener('click', () => {
-        console.log('clicked')
-        console.log(codelen);
+        console.log(`clicked calc-btn codelen=${codelen} errors=${errors}`);
         switch (codelen) {
             case "7":
                 print7(errors);
@@ -32,24 +32,23 @@ document.addEventListener('DOMContentLoaded', () => {
                 break;
             case "255":
                 break;
-
         }
-        
     })
 });
 
 function print7(cap) {
     console.log('here')
+    const results = document.querySelector('#csk-results');
     switch (cap) {
-        case "1":
-            console.log("tryna read")
-            fetch(`../db/7_${cap}`)
+        case 1:
+            fetch('db/7_1.txt')
             .then(response => response.text())
-            .then(text => console.log(text))
+            .then(data => console.log(data))
+            .catch(error => console.error(error));
             break;
-        case "2":
+        case 2:
             break;
-        case "3":
+        case 3:
             break;
     }
 }
