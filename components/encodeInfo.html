@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../bootstrap-5.3.0-alpha3-dist/css/bootstrap.min.css">
+        <script src="../bootstrap-5.3.0-alpha3-dist/js/bootstrap.bundle.min.js"></script>
+    </head>
+    <body>
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link active" href="./encodeInfo.html">СЦК</a>
+            </li>
+            <li class="nav-item invisible">
+                <a class="nav-link" aria-current="page" href="./hypothesisCheck.html">Гіпотеза</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./polynomialCycle.html">Відрахування циклу полінома</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./degreeFactorization.html">Факторизація степенів</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./modularMultiply.html">Модулярне множення</a>
+            </li>
+            
+        </ul>
+        <div class="container">
+            <div class="mb-2 mt-2">
+                <select class="form-select" id="code-word-len" aria-label="Довжина кодового слова">
+                    <option selected>Довжина кодового слова:</option>
+                    <option value="7">7</option>
+                    <option value="15">15</option>
+                    <option value="31">31</option>
+                    <option value="63">63</option>
+                    <option value="127">127</option>
+                    <option value="255">255</option>
+                </select> 
+            </div>
+            <div class="mb-2">
+                <select class="form-select" id="error-corr-cap" aria-label="Корегуюча спроможність коду:">
+                    <option selected>Корегуюча спроможність коду:</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                </select> 
+            </div>
+            <div class="mb-2">
+                <h5>Система числення:</h4>
+                <button type="button" class="btn btn-outline-secondary">2-ва</button>
+                <button type="button" class="btn btn-outline-secondary">8-ва</button>
+                <button type="button" class="btn btn-outline-secondary">16-ва</button>
+            </div>
+            <div class="mb-2">
+                <button type="button" id="calc-factors-btn" class="btn btn-outline-primary">Рахувати</button>
+                <button type="button" class="btn btn-outline-primary">Зупинити</button>
+                <button type="button" class="btn btn-outline-primary">Зберегти поліном</button>
+            </div>
+            <div>
+                <h5>Утворюючі поліноми:</h5>
+                <ol id="csk-results">
+                    
+                </ol>
+            </div>
+        </div>
+        <script src="../scripts/storeFields.js"></script>
+        <script src="../scripts/encodeInfo.js"></script>
+    </body>
+</html>
